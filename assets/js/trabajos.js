@@ -1,37 +1,63 @@
-// assets/js/trabajos.js
+// trabajos.js - preview y modal video (lazy posters + lazy video)
+const modal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const closeBtn = document.querySelector('.close-modal');
 
-const videoCards = document.querySelectorAll('.video-card');
-const modal = document.getElementById('video-modal');
-const modalVideo = document.getElementById('modal-video');
-const modalClose = document.querySelector('.modal-close');
-
-// Función para abrir modal y cargar video
-function openModal(videoSrc) {
-  modal.style.display = 'flex';
-  modalVideo.src = videoSrc + "?autoplay=1&rel=0";
-  document.body.style.overflow = 'hidden'; // Evita scroll del fondo
+// Lazy-load posters: mover poster a data-poster y limpiar hasta interacción
+function prepareLazyPosters() {
+  document.querySelectorAll('.video-card video').forEach(vid => {
+    const poster = vid.getAttribute('poster');
+    if (poster) {
+      vid.dataset.poster = poster;
+      vid.removeAttribute('poster');
+    }
+    // asegurar que no se descargue el video hasta interacción
+    vid.preload = 'none';
+  });
 }
 
-// Función para cerrar modal y detener video
-function closeModal() {
-  modal.style.display = 'none';
-  modalVideo.src = '';
-  document.body.style.overflow = 'auto';
-}
+prepareLazyPosters();
 
-// Asociar click en cada video-card
-videoCards.forEach(card => {
+document.querySelectorAll('.video-card').forEach(card => {
+  const vid = card.querySelector('video');
+  if (!vid) return;
+
+  // setear poster en el primer hover
+  let posterLoaded = false;
+
+  card.addEventListener('mouseenter', () => {
+    if (!posterLoaded && vid.dataset.poster) {
+      vid.setAttribute('poster', vid.dataset.poster);
+      posterLoaded = true;
+    }
+    vid.play().catch(() => { });
+  });
+
+  card.addEventListener('mouseleave', () => {
+    vid.pause();
+    vid.currentTime = 0;
+  });
+
+  // abrir modal al clic
   card.addEventListener('click', () => {
-    openModal(card.dataset.video);
+    const src = vid.querySelector('source').src;
+    modalVideo.src = src;
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    modalVideo.currentTime = 0;
+    modalVideo.play().catch(() => { });
+    document.body.style.overflow = 'hidden';
   });
 });
 
-// Asociar click al botón de cerrar
-modalClose.addEventListener('click', closeModal);
-
-// Cerrar modal al hacer click fuera del contenido
-window.addEventListener('click', function (e) {
-  if (e.target === modal) {
-    closeModal();
-  }
-});
+// cerrar modal
+function closeModal() {
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  modalVideo.pause();
+  modalVideo.src = '';
+  document.body.style.overflow = '';
+}
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });

@@ -1,7 +1,12 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   const heroSection = document.querySelector(".intro-hero");
 
-  preloader.style.display = "none";
-  heroSection.classList.remove("hidden");
+  if (preloader) {
+    preloader.style.display = "none";
+  }
+
+  if (heroSection) {
+    heroSection.classList.remove("hidden");
+  }
 });

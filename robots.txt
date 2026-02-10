@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tusitio.netlify.app/sitemap.xml
+Sitemap: https://zoutt.netlify.app/sitemap.xml

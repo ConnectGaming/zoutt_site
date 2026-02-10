@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Intro / Landing -->
   <url>
-    <loc>https://tusitio.netlify.app/</loc>
-    <lastmod>2025-08-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://zoutt.netlify.app/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Home principal -->
+  <url>
+    <loc>https://zoutt.netlify.app/home.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Trabajos / Portfolio -->
+  <url>
+    <loc>https://zoutt.netlify.app/trabajos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Reel -->
+  <url>
+    <loc>https://zoutt.netlify.app/reel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacidad -->
+  <url>
+    <loc>https://zoutt.netlify.app/privacidad.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

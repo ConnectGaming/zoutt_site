@@ -274,6 +274,7 @@ footer nav a:hover {
   display: block;
   height: clamp(72px, 12vw, 122px); /* Mín: 72px | Fluido: 12vw | Máx: 122px */
   width: auto;
+  margin-top: -8px;
 }
 
 /* Ajuste extra en móviles pequeños */

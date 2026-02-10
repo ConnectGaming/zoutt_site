@@ -1,60 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reel | Zoutt</title>
-  <link rel="stylesheet" href="assets/css/styles.css"> <!-- estilos globales -->
-  <link rel="stylesheet" href="assets/css/reel.css">   <!-- estilos específicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel — Zoutt</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/reel.css">
 </head>
+
 <body>
 
-  <!-- Menú principal igual que el resto del sitio -->
-  <nav class="main-nav">
-    <a href="home.html" class="logo" aria-label="Ir al inicio">
-      <img id="site-logo" src="assets/img/light_logo.png" alt="Zoutt logo">
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="reel.html" class="active">Reel</a></li>
-	  <li><a href="trabajos.html">Trabajos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
-  </nav>
-
-  <!-- Banner animado -->
-  <header id="banner">
-    <div class="animated-line"></div>
-  </header>
-
-  <!-- Contenedor principal del video -->
   <main class="reel-main">
     <div class="reel-video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/UlEXZX4ZXkQ"
-        title="Reel de Zoutt"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
+      <iframe src="https://player.vimeo.com/video/TU_VIDEO_ID" allow="autoplay; fullscreen" allowfullscreen>
       </iframe>
     </div>
   </main>
 
-  <!-- Footer igual que en el resto del sitio -->
-  <footer>
-    <p>&copy 2025 Zoutt video editor. Todos los derechos reservados</p>
-    <nav>
-      <a href="#">Política de privacidad</a> |
-      <a href="#">Contacto</a>
-    </nav>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
