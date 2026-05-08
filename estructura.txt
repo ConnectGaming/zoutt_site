@@ -1,67 +1,107 @@
-Listado de rutas de carpetas
-El n�mero de serie del volumen es E4B7-1835
-C:.
-�   .htaccess
-�   404.html
-�   about.html
-�   contacto.html
-�   home.html
-�   index.html
-�   manifest.json
-�   privacidad.html
-�   README.md
-�   reel.html
-�   robots.txt
-�   sitemap.xml
-�   trabajos.html
-�   _redirects
-�   
-+---assets
-    +---css
-    �       contacto.css
-    �       cookies.css
-    �       intro.css
-    �       privacidad.css
-    �       reel.css
-    �       styles.css
-    �       trabajos.css
-    �       
-    +---img
-    �       banner.jpg
-    �       banner2.jpg
-    �       dark_logo.png
-    �       favicon.ico
-    �       favicon.png
-    �       fondo.jpg
-    �       footer.jpg
-    �       light_logo.png
-    �       main_logo.png
-    �       og-image.jpg
-    �       x-icon
-    �       
-    +---js
-    �       cookies.js
-    �       intro.js
-    �       main.js
-    �       trabajos.js
-    �       
-    +---meta
-    �       og-image.jpg
-    �       
-    +---thumbs
-    �       thumb1.jpg
-    �       thumb1.webp
-    �       thumb10.jpg
-    �       thumb2.jpg
-    �       thumb3.jpg
-    �       thumb4.jpg
-    �       thumb5.jpg
-    �       thumb6.jpg
-    �       thumb7.jpg
-    �       thumb8.jpg
-    �       thumb9.jpg
-    �       
-    +---video
-            intro.mp4
-            video1.mp4
-            
+ESTRUCTURA DEL SITIO ZOUTT - Video Editor Freelance
+===================================================
+
+RAÍZ (/)
+├── .htaccess                        → Configuración para URLs limpias y redirecciones
+├── 404.html                         → Página de error 404
+├── about.html                       → Página "Acerca de"
+├── contacto.html                    → Página de contacto
+├── favicon.ico                      → Icono de pestaña del navegador (32x48px)
+├── home.html                        → Página principal del sitio
+├── index.html                       → Landing page / Intro
+├── manifest.json                    → Configuración PWA (Progressive Web App)
+├── privacidad.html                  → Política de privacidad
+├── README.md                        → Documentación del proyecto
+├── reel.html                        → Página con reel de videos
+├── robots.txt                       → Instrucciones para motores de búsqueda
+├── sitemap.xml                      → Mapa del sitio para SEO
+├── trabajos.html                    → Portfolio / Trabajos realizados
+├── _redirects                       → Configuración de redirecciones (Netlify)
+│
+├── seo/                             → Carpeta SEO y archivos de optimización
+│   └── schema.json                  → Datos estructurados (JSON-LD) para video editor
+│
+└── assets/                          → Recursos estáticos del sitio
+    ├── css/                         → Estilos CSS
+    │   ├── contacto.css             → Estilos página contacto
+    │   ├── cookies.css              → Estilos banner de cookies
+    │   ├── intro.css                → Estilos landing page (index)
+    │   ├── privacidad.css           → Estilos política privacidad
+    │   ├── reel.css                 → Estilos página reel
+    │   ├── styles.css               → Estilos generales
+    │   └── trabajos.css             → Estilos portfolio
+    │
+    ├── img/                         → Imágenes del sitio
+    │   ├── banner.jpg               → Banner imagen
+    │   ├── banner2.jpg              → Banner alternativo
+    │   ├── dark_logo.png            → Logo versión oscura
+    │   ├── favicon.ico              → Copia icono (usar /favicon.ico de raíz)
+    │   ├── favicon.png              → Icono PNG alternativo
+    │   ├── fondo.jpg                → Imagen de fondo
+    │   ├── footer.jpg               → Imagen pie de página
+    │   ├── light_logo.png           → Logo versión clara
+    │   └── main_logo.png            → Logo principal
+    │
+    ├── js/                          → Scripts JavaScript
+    │   ├── cookies.js               → Script gestión de cookies
+    │   ├── intro.js                 → Script para landing page
+    │   ├── main.js                  → Script principal
+    │   └── trabajos.js              → Script para portfolio
+    │
+    ├── meta/                        → Metadatos e imágenes SEO/Social Media
+    │   └── og-image.jpg             → Open Graph image (1200x630px) para redes
+    │
+    ├── thumbs/                      → Miniaturas de videos/trabajos
+    │   ├── thumb1.jpg
+    │   ├── thumb1.webp
+    │   ├── thumb2.jpg
+    │   ├── thumb3.jpg
+    │   ├── thumb4.jpg
+    │   ├── thumb5.jpg
+    │   ├── thumb6.jpg
+    │   ├── thumb7.jpg
+    │   ├── thumb8.jpg
+    │   ├── thumb9.jpg
+    │   └── thumb10.jpg
+    │
+    └── video/                       → Videos del sitio
+        ├── intro.mp4                → Video de landing page
+        └── video1.mp4               → Video de trabajos/portfolio
+
+ARCHIVOS A REVISAR / LIMPIAR:
+=============================
+⚠ assets/img/og-image.jpg           → DUPLICADO (usar /assets/meta/og-image.jpg)
+⚠ assets/img/x-icon                 → ARCHIVO SIN EXTENSIÓN (eliminar)
+
+CONFIGURACIÓN SEO Y REDIRECCIONES:
+==================================
+✓ .htaccess                         → URLs limpias (elimina .html de URLs)
+✓ _redirects                        → Configuración Netlify para redirecciones
+✓ robots.txt                        → Directivas crawling para motores búsqueda
+✓ sitemap.xml                       → Mapa de URLs indexable
+✓ manifest.json                     → PWA manifest con icono favicon
+✓ seo/schema.json                   → Datos estructurados JSON-LD
+
+META TAGS Y SOCIAL MEDIA:
+=========================
+✓ Open Graph (og:image)             → 1200x630px en /assets/meta/og-image.jpg
+✓ Twitter Card                      → Mismo og-image.jpg
+✓ Favicon                           → /favicon.ico (32x48px)
+
+REFERENCIAS EN ARCHIVOS:
+=======================
+index.html:
+  - og:image → /assets/meta/og-image.jpg ✓
+  - twitter:image → /assets/meta/og-image.jpg ✓
+  - favicon → /favicon.ico ✓
+
+manifest.json:
+  - icons[0].src → /favicon.ico
+
+ÚLTIMO ACTUALIZADO:
+===================
+Fecha: 7 de mayo de 2026
+- Estructura validada y documentada
+- Rutas correctas del meta folder
+- Identificados archivos deprecados
+- Plan SEO e imágenes meta integrado

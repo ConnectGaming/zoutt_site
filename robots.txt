@@ -1,4 +1,32 @@
+# Zoutt Video Editor - Robots.txt
+# Última actualización: 7 de mayo de 2026
+
+# Permitir acceso a todos los bots
 User-agent: *
 Allow: /
 
+# Descargar información lentamente para no sobrecargar el servidor
+Crawl-delay: 1
+
+# Archivos específicos que no queremos que se indexen
+Disallow: /backup_zoutt_site-main.zip
+Disallow: /*.zip$
+Disallow: /assets/js/*.js$
+Disallow: /assets/css/*.css$
+
+# Permitir explícitamente los archivos CSS y JS (algunos bots pueden ignorar Disallow)
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Ubicación del sitemap
 Sitemap: https://zoutt.netlify.app/sitemap.xml
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

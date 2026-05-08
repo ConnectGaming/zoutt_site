@@ -1,17 +1,36 @@
 {
-  "name": "Zoutt - Portfolio",
+  "name": "Zoutt - Freelance Video Editor",
   "short_name": "Zoutt",
-  "description": "Sitio web profesional de Zoutt, editor de video freelance.",
-  "start_url": "/index.html",
+  "description": "Sitio web profesional de Zoutt, editor de video freelance especializado en edición creativa, diseño audiovisual e IA.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#ff0055",
+  "scope": "/",
   "icons": [
     {
-      "src": "assets/img/favicon.ico",
+      "src": "/favicon.ico",
       "sizes": "48x48",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "lang": "es"
+  "lang": "es",
+  "categories": [
+    "productivity",
+    "business"
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/meta/og-image.jpg",
+      "type": "image/jpeg",
+      "sizes": "1200x630"
+    }
+  ]
 }

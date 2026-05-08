@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
@@ -43,7 +44,8 @@ html, body {
 .intro-hero {
   position: relative;
   width: 100%;
-  min-height: 93vh; /* Reducido para mostrar footer sin scroll completo */
+  min-height: 93vh;
+  /* Reducido para mostrar footer sin scroll completo */
   overflow: hidden;
 }
 
@@ -57,12 +59,30 @@ html, body {
   z-index: 1;
 }
 
+/* PATRÓN LCD SOBRE EL VIDEO */
+.lcd-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  opacity: 0.8;
+  mix-blend-mode: overlay;
+}
+
 /* CAPA SUAVE SOBRE EL VIDEO */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.15); /* Más clara para no oscurecer el video */
+  background: rgba(0, 0, 0, 0.15);
+  /* Más clara para no oscurecer el video */
   z-index: 2;
 }
 
@@ -71,7 +91,8 @@ html, body {
   position: relative;
   z-index: 3;
   width: 100%;
-  height: 120px; /* Igual que en home.html */
+  height: 120px;
+  /* Igual que en home.html */
   background-color: #000;
   background-size: cover;
   background-position: center;

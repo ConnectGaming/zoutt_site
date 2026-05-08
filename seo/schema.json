@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zoutt",
+  "url": "https://zoutt.netlify.app",
+  "description": "Freelance Video Editor especializado en edición creativa, diseño audiovisual e IA",
+  "jobTitle": "Freelance Video Editor",
+  "image": "https://zoutt.netlify.app/assets/img/main_logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/in/zoutt",
+    "https://twitter.com/zoutt",
+    "https://instagram.com/zoutt"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "url": "https://zoutt.netlify.app/contacto"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zoutt Studios",
+    "url": "https://zoutt.netlify.app"
+  },
+  "knownFor": [
+    "Video Editing",
+    "Creative Video Design",
+    "AI-Assisted Video Production",
+    "Content Creation",
+    "Audio Visual Design"
+  ],
+  "skills": [
+    {
+      "@type": "Thing",
+      "name": "Video Editing"
+    },
+    {
+      "@type": "Thing",
+      "name": "Motion Graphics"
+    },
+    {
+      "@type": "Thing",
+      "name": "Visual Effects"
+    },
+    {
+      "@type": "Thing",
+      "name": "Audio Design"
+    },
+    {
+      "@type": "Thing",
+      "name": "AI Integration"
+    }
+  ]
+}
