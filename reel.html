@@ -24,6 +24,7 @@
   <meta name="twitter:description" content="Mira mi showreel de edición de video y diseño audiovisual." />
   <meta name="twitter:image" content="https://zoutt.netlify.app/assets/meta/og-image.jpg" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" />
 
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -31,14 +32,44 @@
 </head>
 
 <body>
+  <nav class="main-nav">
+    <a href="home.html" class="logo" aria-label="Ir al inicio">
+      <img id="site-logo" src="assets/img/light_logo.png" alt="Zoutt logo">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reel.html">Reel</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header id="banner">
+    <div class="animated-line"></div>
+  </header>
 
   <main class="reel-main">
     <div class="reel-video-wrapper">
-      <iframe src="assets/video/reel.mp4" allow="autoplay; fullscreen" allowfullscreen>
+      <iframe src="https://www.youtube.com/embed/UlEXZX4ZXkQ?controls=0&autoplay=1&mute=1&loop=1&playlist=UlEXZX4ZXkQ"
+        allow="autoplay; fullscreen" allowfullscreen>
       </iframe>
     </div>
   </main>
 
+  <footer>
+    <p>&copy 2025 Zoutt video editor. Todos los derechos reservados</p>
+    <nav>
+      <a href="privacidad.html">Política de privacidad</a> |
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
